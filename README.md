@@ -33,7 +33,7 @@ The code calculates the mean and standard deviation of the evaluation metrics to
 
 ## Tests
 
-The model has been tested on several real images. The outputs for three images are uploaded. In these images from left to right are the actual images with color intensity modified for better visualization, the location of predicted cosmics highlighted (masked) on the image, and the predicted cosmics (the location of cosmics (mask)).
+The model has been tested on several real images. The outputs for three images are uploaded. In these images from left to right are the actual images with color intensity modified for better visualization, the location of predicted cosmics highlighted (masked) on the image, and the predicted cosmics (the location of cosmics (mask)). On the real images, the locations of cosmics are masked with the value -1.
 
 ## Conclusion
 
