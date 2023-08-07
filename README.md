@@ -31,6 +31,10 @@ The code evaluates the trained model on the test set and calculates various eval
 
 The code calculates the mean and standard deviation of the evaluation metrics to assess the model's performance. Box plots are used to visualize the distribution of each evaluation metric, providing insights into the model's accuracy and precision. The box plots help identify the model's performance variability across different test images.
 
+## Tests
+
+The model has been tested on several real images. The outputs for three images are uploaded. In these images from left to right are the actual images with color intensity modified for better visualization, the location of predicted cosmics highlighted (masked) on the image, and the predicted cosmics (the location of cosmics (mask)).
+
 ## Conclusion
 
 With this implementation, the code provides a well-structured and complex solution for image segmentation with DeeplabV3+. It detects cosmics as masks in images obtained from X-ray data and evaluates the model's performance using various evaluation metrics. The implementation demonstrates how to effectively preprocess data, define and train a segmentation model, and evaluate its performance in a real-world application. The evaluation results and visualizations enable researchers and practitioners to analyze and understand the model's accuracy and precision in cosmics detection tasks.
