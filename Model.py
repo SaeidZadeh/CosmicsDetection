@@ -5,12 +5,7 @@ Created on Thu Jul 13 11:04:16 2023
 
 @author: Saeid
 """
-
-
 ############################## Image Segmentation for cosmics detection using DeeplabV3+
-
-# This Jupyter Notebook provides a comprehensive implementation of image segmentation using the powerful DeeplabV3+ model.
-# We'll use various libraries, data preprocessing, model definition, training, and evaluation steps to achieve accurate results.
 
 # Import the required libraries
 import os
