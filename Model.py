@@ -604,7 +604,3 @@ plt.show()
 ax = sns.boxplot(df["no cosmics"], flierprops={"marker": "x"})
 ax.set(title='No. Cosmics', ylabel='Accuracy')
 plt.show()
-
-# With this implementation, we have a well-structured and complex code for image segmentation with DeeplabV3+.
-# The code is used to detect cosmics as masks in image segmentation of images obtained from X-ray data.
-# It utilizes a variety of libraries, custom metrics, data processing, model definition, training, and evaluation.
