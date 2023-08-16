@@ -5,36 +5,33 @@
 
 ## Introduction
 
-This code+ provides a comprehensive implementation of image segmentation using the powerful DeeplabV3+ model. The purpose of this code is to detect cosmics as masks in images obtained from X-ray data. The implementation involves various libraries, data preprocessing, model definition, training, and evaluation steps to achieve accurate results.
+This document provides a comprehensive implementation of image segmentation using the powerful DeeplabV3+ model. The purpose of this code is to detect cosmics as masks in images obtained from X-ray data. The implementation includes various libraries, data preprocessing, model definition, training, and evaluation steps to achieve accurate results.
 
 ## Libraries and Setup
 
-The code begins by importing the required libraries for the implementation. It includes libraries like OpenCV, NumPy, Matplotlib, TensorFlow, Keras, PIL (Python Imaging Library), and others. Additionally, it sets up configurations to enhance the quality of produced images for visualization.
+The code begins by importing the libraries needed for the implementation. These include libraries such as OpenCV, NumPy, Matplotlib, TensorFlow, Keras, PIL (Python Imaging Library), and others. Configurations are also set up to improve the quality of the images generated for visualization.
 
 ## Data Preprocessing
 
-Before training the model, the code preprocesses the data by identifying image and mask files for the train and validation sets. The paths to the image and mask files are collected and stored in lists. The images and masks are then resized and converted into tensors with batches of size 6 using data generators.
+Before training the model, the code preprocesses the data by identifying the image and mask files for the training and validation sets. The paths to the image and mask files are collected and stored in lists. The images and masks are then resized and converted to tensors with batches of size 6 using data generators.
 
 ## Model Definition: DeeplabV3+
 
-The DeeplabV3+ model is used for image segmentation. The code defines the model architecture, incorporating a pretrained ResNet50 as the backbone. The model uses convolution blocks and dilated spatial pyramid pooling to capture context information from different scales in the image.
+\subsubsection{Model Definition: DeeplabV3+}
+The DeeplabV3+ model is used for image segmentation. The code defines the model architecture, which includes a pre-trained ResNet50 as a backbone. The model uses convolutional blocks and dilated spatial pyramid pooling to capture contextual information from different scales of the image.
 
 ## Model Compilation and Training
 
-The model is compiled using the Adam optimizer and sparse categorical cross-entropy loss function. Custom metrics such as specificity, precision, and recall are defined for model evaluation. The code defines a learning rate scheduler and early stopping callbacks to improve training performance. The model is then trained on the provided data for 100 epochs.
+The model is compiled using the Adam optimizer and the sparse categorical cross-entropy loss function. Custom metrics such as specificity, precision, and recall are defined for evaluating the model. The code defines a scheduler for learning rate and early stop callbacks to improve training performance. The model is then trained for 100 epochs using the provided data.
 
 ## Model Evaluation
 
-The code evaluates the trained model on the test set and calculates various evaluation metrics such as Intersection over Union (IoU), Dice coefficient, Pixel Accuracy, Precision, Recall, and F1 score. Additionally, it estimates the number of cosmics present in the test images using connected components analysis. The evaluation results are saved in different lists for analysis.
+The code evaluates the trained model on the test set and computes various evaluation metrics such as Intersection over Union (IoU), Dice coefficient, Pixel Accuracy, Precision, Recall, and F1 score. It also estimates the number of cosmics present in the test images using connected component analysis. The evaluation results are stored in different lists for analysis.
 
 ## Evaluation Metrics and Visualization
 
-The code calculates the mean and standard deviation of the evaluation metrics to assess the model's performance. Box plots are used to visualize the distribution of each evaluation metric, providing insights into the model's accuracy and precision. The box plots help identify the model's performance variability across different test images.
-
-## Tests
-
-The model has been tested on several real images. The outputs for three images are uploaded. In these images from left to right are the actual images with color intensity modified for better visualization, the location of predicted cosmics highlighted (masked) on the image, and the predicted cosmics (the location of cosmics (mask)). On the real images, the locations of cosmics are masked with the value -1.
+The code calculates the mean and standard deviation of the evaluation metrics to evaluate the performance of the model. Boxplots are used to visualize the distribution of each evaluation metric, providing information about the accuracy and precision of the model. The boxplots help to identify the differences in the performance of the model on different test images.
 
 ## Conclusion
 
-With this implementation, the code provides a well-structured and complex solution for image segmentation with DeeplabV3+. It detects cosmics as masks in images obtained from X-ray data and evaluates the model's performance using various evaluation metrics. The implementation demonstrates how to effectively preprocess data, define and train a segmentation model, and evaluate its performance in a real-world application. The evaluation results and visualizations enable researchers and practitioners to analyze and understand the model's accuracy and precision in cosmics detection tasks.
+With this implementation, the code provides a well-structured and complex solution for image segmentation with DeeplabV3+. It detects cosmics as masks in images obtained from X-ray data and evaluates the performance of the model using various evaluation metrics. The implementation shows how to effectively preprocess data, define and train a segmentation model, and evaluate its performance in a real-world application. The evaluation results and visualizations enable researchers and practitioners to analyze and understand the accuracy and precision of the model in detecting cosmics.
